@@ -1,0 +1,35 @@
+@import '@fontsource/aileron';
+@import './partials/variables';
+@import './partials/mixins';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: $font;
+}
+
+body {
+	max-height: 100vh;
+	height: 100vh;
+
+	color: $colorText;
+
+	transition: all $dark-theme-duration $dark-theme-timing;
+
+	:is(.emoji) {
+		color: rgba(0, 0, 0, 1);
+	}
+
+	&.dark {
+		background-color: rgba(0, 0, 0, 1);
+		color: white;
+
+		.underscore, .title, footer, .arrow {
+			color: #4AF626;
+		}
+	}
+}
