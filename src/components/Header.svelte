@@ -37,9 +37,11 @@
 	writeTitle();
 </script>
 
-<header>
-	<h1 class="title">{writedTitle}<span class="underscore">_</span></h1>
-	<button class="theme" on:click={toggleDarkTheme}>
+<header class="flex justify-between items-center px-4">
+	<h1 class="text-lg font-normal transition-all duration-500 ease-in-out">
+		{writedTitle}<span class="underscore dur">_</span>
+	</h1>
+	<button class="cursor-pointer" on:click={toggleDarkTheme}>
 		{#if !darkTheme}
 			<div>
 				<Moon width={iconSize} height={iconSize} fill="black" />
@@ -52,31 +54,9 @@
 	</button>
 </header>
 
-<style lang="scss">
-	@import '../lib/style/partials/variables';
-
-	header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-
-		padding: 0 1rem;
-
-		.title {
-			transition: all $dark-theme-duration $dark-theme-timing;
-			font-size: 1.2rem;
-			font-weight: 400;
-
-			.underscore {
-				animation: fade 1s infinite steps(1, end);
-			}
-		}
-
-		.theme {
-			cursor: pointer;
-			background-color: transparent;
-			border: none;
-		}
+<style lang="postcss">
+	.underscore {
+		animation: fade 1s infinite steps(1, end);
 	}
 
 	@keyframes fade {

@@ -5,21 +5,7 @@
 	export let to = '';
 </script>
 
-<section {id} class="section">
+<section {id} class="relative h-full px-8 flex justify-end items-center snap-start">
 	<slot />
 	<Arrow {to} />
 </section>
-
-<style>
-	section.section {
-		position: relative;
-		height: 100%;
-
-		padding: 0 2rem;
-		display: flex;
-		justify-content: end;
-		align-items: center;
-
-		scroll-snap-align: start;
-	}
-</style>

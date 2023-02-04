@@ -4,24 +4,15 @@
 	export let to = '';
 </script>
 
-<a class="arrow" href={to}>
+<a
+	class="arrow absolute left-1/2 -translate-x-1/2 text-black rounded-sm transition-all duration-500 ease-in-out bottom-4 "
+	href={to}
+>
 	<ArrowDownSquare width="50px" height="50px" />
 </a>
 
 <style lang="scss">
-	@import '../../lib/style/partials/_variables.scss';
-
 	.arrow {
-		border-radius: 10px;
-		color: black;
-
-		position: absolute;
-		// bottom: 5rem;
-		left: 50%;
-		transform: translate(-50%);
-
-		transition: all $dark-theme-duration $dark-theme-timing;
-
 		animation: bounce 2s infinite ease-in;
 	}
 
