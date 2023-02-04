@@ -18,7 +18,8 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"1YiB.svelte-bundle"
+				"1YiB.svelte-bundle",
+				"bradlc.vscode-tailwindcss"
 			]
 		}
 	},
