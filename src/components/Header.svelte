@@ -20,9 +20,8 @@
 	}
 
 	function toggleDarkTheme() {
-		const body = document.querySelector('body');
-		body?.classList.toggle('dark');
-		darkTheme = !!body?.classList.contains('dark');
+		document.documentElement.classList.toggle('dark');
+		darkTheme = !!document.documentElement.classList.contains('dark');
 		localStorage.theme = darkTheme;
 	}
 
@@ -38,8 +37,8 @@
 </script>
 
 <header class="flex justify-between items-center px-4">
-	<h1 class="text-lg font-normal transition-all duration-500 ease-in-out">
-		{writedTitle}<span class="underscore dur">_</span>
+	<h1 class="text-lg transition-all duration-500 ease-in-out dark:text-lime-400">
+		{writedTitle}<span class="underscore dark:text-lime-400">_</span>
 	</h1>
 	<button class="cursor-pointer" on:click={toggleDarkTheme}>
 		{#if !darkTheme}
