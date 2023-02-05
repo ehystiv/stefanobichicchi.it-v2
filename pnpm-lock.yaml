@@ -28,7 +28,6 @@ specifiers:
 
 dependencies:
   howler: 2.2.3
-  tailwind-scrollbar-hide: 1.1.7
 
 devDependencies:
   '@fontsource/aileron': 4.5.3
@@ -49,6 +48,7 @@ devDependencies:
   svelte: 3.55.1
   svelte-bootstrap-icons: 2.3.1
   svelte-check: 3.0.3_4xcsxbgwqdrvcryxlywpxdpbsu
+  tailwind-scrollbar-hide: 1.1.7
   tailwindcss: 3.2.4_postcss@8.4.21
   tslib: 2.4.1
   typescript: 4.9.4
@@ -2349,7 +2349,7 @@ packages:
 
   /tailwind-scrollbar-hide/1.1.7:
     resolution: {integrity: sha512-X324n9OtpTmOMqEgDUEA/RgLrNfBF/jwJdctaPZDzB3mppxJk7TLIDmOreEDm1Bq4R9LSPu4Epf8VSdovNU+iA==}
-    dev: false
+    dev: true
 
   /tailwindcss/3.2.4_postcss@8.4.21:
     resolution: {integrity: sha512-AhwtHCKMtR71JgeYDaswmZXhPcW9iuI9Sp2LvZPo9upDZ7231ZJ7eA9RaURbhpXGVlrjX4cFNlB4ieTetEb7hQ==}
