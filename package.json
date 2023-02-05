@@ -12,6 +12,7 @@
 	},
 	"devDependencies": {
 		"@fontsource/aileron": "^4.5.3",
+		"@sveltejs/adapter-netlify": "1.0.0-next.88",
 		"@sveltejs/adapter-static": "^1.0.5",
 		"@sveltejs/kit": "^1.0.0",
 		"@types/cookie": "^0.5.1",
