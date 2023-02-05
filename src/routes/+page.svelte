@@ -9,8 +9,6 @@
 	<meta name="description" content="Stefano Bichicchi Portfolio" />
 </svelte:head>
 
-<template>
-	<Home />
-	<Works />
-	<Languages />
-</template>
+<Home />
+<Works />
+<Languages />

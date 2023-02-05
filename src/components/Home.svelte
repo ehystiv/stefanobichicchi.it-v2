@@ -4,7 +4,7 @@
 
 <Section id="home" to="#works">
 	<div class="text-right basis-3/4 grid grid-cols-[1fr_0.1fr] gap-x-4 gap-y-4">
-		<h1 class="text-5xl">Ciao, sono Stefano</h1>
+		<h1 class="text-5xl">Ciao, sono <span class="underline underline-offset-5">Stefano</span></h1>
 		<h1 class="text-5xl text-center">👋</h1>
 		<div class="text-2xl font-light">
 			Sviluppatore WEB e amante della tecnologia, @Bologna. <br />
