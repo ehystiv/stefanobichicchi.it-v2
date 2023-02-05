@@ -1,17 +1,18 @@
 <script lang="ts">
 	import Section from './shared/Section.svelte';
-	import Terminal from './shared/Terminal.svelte';
+	import Timeline from './shared/Timeline.svelte';
 
-	let content = '';
+	import works from '$lib/data/works.js';
+	import learns from '$lib/data/learns.js';
 </script>
 
 <Section id="works" to="#languages">
 	<div class="h-full basis-full p-1 grid grid-cols-2 grid-rows-[1fr] gap-x-4">
-		<div class="container-left">
-			<Terminal title="Lavori" command="works ls -la" {content} />
+		<div>
+			<Timeline title="Lavori" items={works} />
 		</div>
-		<div class="container-right">
-			<Terminal title="Apprendimento" command="learns ls -la" {content} />
+		<div>
+			<Timeline title="Apprendimento" items={learns} />
 		</div>
 	</div>
 </Section>
