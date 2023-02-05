@@ -3,7 +3,11 @@ module.exports = {
 	darkMode: 'class',
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
-		extend: {}
+		extend: {
+			gridTemplateRows: {
+				layout: '8vh 84vh 8vh'
+			}
+		}
 	},
-	plugins: []
+	plugins: [require('tailwind-scrollbar-hide')]
 };

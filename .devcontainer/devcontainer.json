@@ -20,13 +20,21 @@
 			"extensions": [
 				"1YiB.svelte-bundle",
 				"bradlc.vscode-tailwindcss",
-				"moalamri.inline-fold"
+				"moalamri.inline-fold",
+				"svelte.svelte-vscode",
+				"esbenp.prettier-vscode",
+				"wix.vscode-import-cost"
 			]
 		}
 	},
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "pnpm install"
+	"postCreateCommand": "pnpm install",
+	"portsAttributes": {
+		"5173": {
+			"label": "Server"
+		}
+	}
 
 	// Configure tool-specific properties.
 	// "customizations": {},

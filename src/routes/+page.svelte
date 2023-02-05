@@ -1,5 +1,6 @@
 <script>
 	import Home from '../components/Home.svelte';
+	import Languages from '../components/Languages.svelte';
 	import Works from '../components/Works.svelte';
 </script>
 
@@ -8,8 +9,8 @@
 	<meta name="description" content="Stefano Bichicchi Portfolio" />
 </svelte:head>
 
-<Home />
-<Works />
-
-<style lang="scss">
-</style>
+<template>
+	<Home />
+	<Works />
+	<Languages />
+</template>

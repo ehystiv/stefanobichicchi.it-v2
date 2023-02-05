@@ -5,8 +5,8 @@
 	let content = '';
 </script>
 
-<Section id="works">
-	<div class="content">
+<Section id="works" to="#languages">
+	<div class="h-full basis-full p-1 grid grid-cols-2 grid-rows-[1fr] gap-x-4">
 		<div class="container-left">
 			<Terminal title="Lavori" command="works ls -la" {content} />
 		</div>
@@ -15,17 +15,3 @@
 		</div>
 	</div>
 </Section>
-
-<style lang="scss">
-	.content {
-		height: 100%;
-		flex-basis: 100%;
-
-		padding: 5px;
-		display: grid;
-
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: 1fr;
-		column-gap: 1rem;
-	}
-</style>

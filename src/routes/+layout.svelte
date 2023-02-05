@@ -4,32 +4,12 @@
 	import Header from '../components/Header.svelte';
 </script>
 
-<div class="app">
+<div class="grid grid-rows-layout">
 	<Header />
 
-	<main>
+	<main class=" overflow-y-auto scrollbar-hide snap-y snap-mandatory scroll-smooth">
 		<slot />
 	</main>
 
 	<Footer />
 </div>
-
-<style lang="scss">
-	.app {
-		display: grid;
-		grid-template-rows: 8vh 84vh 8vh;
-
-		main {
-			-ms-overflow-style: none; /* for Internet Explorer, Edge */
-			scrollbar-width: none; /* for Firefox */
-			overflow-y: scroll;
-
-			scroll-snap-type: y mandatory;
-			scroll-behavior: smooth;
-
-			&::-webkit-scrollbar {
-				display: none; /* for Chrome, Safari, and Opera */
-			}
-		}
-	}
-</style>
