@@ -15,7 +15,7 @@
 	export let items: JobItem[] = [];
 </script>
 
-<div class="h-full w-full bg-white rounded-xl shadow-xl p-4 overflow-auto scrollbar-hide">
+<div class="h-full w-full bg-white rounded-xl drop-shadow-lg p-4 overflow-auto scrollbar-hide">
 	<h1 class="text-3xl font-thin">{title}</h1>
 	<hr class="mb-4" />
 	<div class="flex flex-col">

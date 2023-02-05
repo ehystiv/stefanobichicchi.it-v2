@@ -7,7 +7,7 @@
 </script>
 
 <Section id="works" to="#languages">
-	<div class="h-full basis-full p-1 grid grid-cols-2 grid-rows-[1fr] gap-x-4">
+	<div class="h-full basis-full p-1 grid grid-cols-2 grid-rows-[1fr] gap-x-4 py-4">
 		<div>
 			<Timeline title="Lavori" items={works} />
 		</div>
