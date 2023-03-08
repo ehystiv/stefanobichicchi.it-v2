@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import '@fontsource/aileron';
+@import 'devicon/devicon.min.css';
 
 html {
 	font-family: 'Aileron', Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
@@ -10,5 +11,5 @@ html {
 }
 
 body {
-	@apply max-h-screen h-screen bg-emerald-100 dark:text-white dark:bg-slate-900 transition-all duration-500 ease-out;
+	@apply max-h-screen h-screen bg-emerald-100 dark:text-white dark:bg-neutral-900 transition-all duration-500 ease-out;
 }

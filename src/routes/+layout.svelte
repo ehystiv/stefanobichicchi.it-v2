@@ -7,7 +7,7 @@
 <div class="grid grid-rows-layout">
 	<Header />
 
-	<main class=" overflow-y-auto scrollbar-hide snap-y snap-mandatory scroll-smooth">
+	<main class=" overflow-y-auto scrollbar-hide snap-y snap-mandatory scroll-smooth z-10">
 		<slot />
 	</main>
 
