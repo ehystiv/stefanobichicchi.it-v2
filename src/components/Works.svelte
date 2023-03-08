@@ -7,11 +7,13 @@
 </script>
 
 <Section id="works" to="#languages">
-	<div class="h-full basis-full p-1 grid grid-cols-2 grid-rows-[1fr] gap-x-4 py-4">
-		<div>
+	<div
+		class="h-full basis-full sm:p-0 lg:p-1 grid sm:grid-cols-1 sm:grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 gap-y-4 lg:gap-x-4 py-4 dark:text-black"
+	>
+		<div class="max-h-full overflow-hidden">
 			<Timeline title="Lavori" items={works} />
 		</div>
-		<div>
+		<div class="overflow-hidden">
 			<Timeline title="Apprendimento" items={learns} />
 		</div>
 	</div>

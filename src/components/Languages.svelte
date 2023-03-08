@@ -1,54 +1,22 @@
 <script lang="ts">
 	import Section from './shared/Section.svelte';
 
-	const items = [
-		'devicon-html5-plain',
-		'devicon-css3-plain',
-		'devicon-bootstrap-plain',
-		'devicon-sass-original',
-		'devicon-tailwindcss-plain',
-		'devicon-javascript-plain',
-		'devicon-nodejs-plain',
-		'devicon-typescript-plain',
-		'devicon-express-original',
-		'devicon-nestjs-plain',
-		'devicon-vuejs-plain',
-		'devicon-svelte-plain',
-		'devicon-nuxtjs-plain',
-		'devicon-php-plain',
-		'devicon-laravel-plain',
-		'devicon-c-plain',
-		'devicon-java-plain',
-		'devicon-python-plain',
-		'devicon-git-plain',
-		'devicon-github-original',
-		'devicon-windows8-original',
-		'devicon-linux-plain',
-		'devicon-postgresql-plain',
-		'devicon-mysql-plain',
-		'devicon-mongodb-plain',
-		'devicon-nginx-original',
-		'devicon-godot-plain',
-		'devicon-npm-original-wordmark',
-		'devicon-yarn-plain',
-		'devicon-raspberrypi-line',
-		'devicon-ubuntu-plain',
-		'devicon-vscode-plain',
-		'devicon-docker-plain'
-	];
+	import langAndTools from '../lib/data/langAndTools';
 </script>
 
 <Section id="languages">
-	<div class="h-full basis-full grid grid-cols-6 grid-rows-6 place-items-center gap-3 p-10">
-		{#each items as item}
+	<div
+		class="h-full basis-full grid grid-cols-4 lg:grid-cols-6 lg:grid-rows-6 place-items-center gap-3 p-2 lg:p-10"
+	>
+		{#each langAndTools as item}
 			<div
-				class="card h-full w-full bg-white flex justify-center items-center rounded-xl transition-all hover:z-50 hover:scale-150 hover:border relative"
+				class="card h-full w-full bg-white flex justify-center items-center rounded-xl transition-all duration-300 hover:z-50 hover:scale-125 lg:hover:scale-150 hover:border relative aspe"
 			>
-				<em class="{item} colored text-6xl" />
+				<em class="{item.icon} colored text-4xl lg:text-6xl" />
 				<div
 					class="absolute w-full h-1/3 bottom-0 rounded-b-xl bg-gradient-to-t from-slate-500 to-transparent hidden items-center justify-center"
 				>
-					<h1 class="text-center dark:text-black">TITLE</h1>
+					<h1 class="text-center dark:text-black text-[.6rem] md:text-md">{item.name}</h1>
 				</div>
 			</div>
 		{/each}

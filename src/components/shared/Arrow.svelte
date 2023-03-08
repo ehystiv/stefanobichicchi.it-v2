@@ -1,15 +1,17 @@
-<script>
+<script lang="ts">
 	import ArrowDownSquare from 'svelte-bootstrap-icons/lib/ArrowDownSquareFill.svelte';
 
-	export let to = '';
+	export let to: string | boolean = false;
 </script>
 
-<a
-	class="arrow absolute z-10 left-1/2 -translate-x-1/2 text-black dark:text-lime-400 rounded-sm transition-all duration-500 ease-in-out bottom-4 "
-	href={to}
->
-	<ArrowDownSquare width="50px" height="50px" />
-</a>
+{#if to}
+	<a
+		class="arrow absolute z-10 left-1/2 -translate-x-1/2 text-black dark:text-lime-400 rounded-lg transition-all duration-500 ease-in-out bottom-4 bg-white dark:bg-black"
+		href={String(to)}
+	>
+		<ArrowDownSquare width="50px" height="50px" />
+	</a>
+{/if}
 
 <style lang="scss">
 	.arrow {
