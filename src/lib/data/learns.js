@@ -22,7 +22,7 @@ export default [
 	},
 	{
 		name: 'secret santa extractor',
-		link: 'https://clarodelunaristorante.it/',
+		link: 'https://github.com/Stiv1100001/SecretSantaExtractor',
 		date: '2021',
 		techStack: 'Python + SQLite3',
 		description: 'Sorteggiatore di Babbo Natale segreto'
