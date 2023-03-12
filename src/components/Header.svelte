@@ -1,6 +1,8 @@
 <script>
-	import Moon from 'svelte-bootstrap-icons/lib/Moon.svelte';
-	import Sun from 'svelte-bootstrap-icons/lib/Sun.svelte';
+	import Moon from 'phosphor-svelte/lib/Moon';
+	import Sun from 'phosphor-svelte/lib/Sun';
+
+	import { fly, fade } from 'svelte/transition';
 
 	let title = 'Stefano Bichicchi - Web Developer';
 	let writedTitle = '';
@@ -8,7 +10,7 @@
 
 	let darkTheme = false;
 
-	const iconSize = 20;
+	const iconSize = 30;
 
 	function writeTitle() {
 		if (writedTitle.length < title.length) {
@@ -25,29 +27,22 @@
 		localStorage.theme = darkTheme;
 	}
 
-	function initTheme() {
-		// const isDarkTheme = !!localStorage.theme;
-		// if (isDarkTheme === 'true') {
-		// 	document.querySelector('body')?.classList.add('dark');
-		// }
-	}
-
-	initTheme();
 	writeTitle();
 </script>
 
 <header class="flex justify-between items-center px-4">
 	<h1 class="text-lg transition-all duration-500 ease-in-out dark:text-lime-400">
-		{writedTitle}<span class="underscore dark:text-lime-400">_</span>
+		{writedTitle}
+		<span class="underscore dark:text-lime-400">_</span>
 	</h1>
 	<button class="cursor-pointer" on:click={toggleDarkTheme}>
 		{#if !darkTheme}
 			<div>
-				<Moon width={iconSize} height={iconSize} fill="black" />
+				<Moon size={iconSize} color="black" />
 			</div>
 		{:else}
 			<div>
-				<Sun width={iconSize + 5} height={iconSize + 5} fill="white" />
+				<Sun size={iconSize} color="white" />
 			</div>
 		{/if}
 	</button>
