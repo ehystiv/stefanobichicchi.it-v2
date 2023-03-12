@@ -1,6 +1,5 @@
 <script lang="ts">
-	import ArrowUpRight from 'svelte-bootstrap-icons/lib/ArrowUpRight.svelte';
-	import { is_empty } from 'svelte/internal';
+	import ArrowUpRight from 'phosphor-svelte/lib/ArrowUpRight';
 
 	interface JobItem {
 		name: string;
@@ -28,8 +27,12 @@
 						{item.name}
 						{#if item.client} <span>- ({item.client})</span> {/if}
 					</div>
-					<a href={item.link} target="_blank" rel="noopener noreferrer"
-						><ArrowUpRight class="ml-1" /></a
+					<a
+						href={item.link}
+						target="_blank"
+						rel="noopener noreferrer"
+						class=" transition-all hover:rotate-45 hover:translate-x-2"
+						><ArrowUpRight size="25" weight="thin" /></a
 					>
 				</h1>
 				<h1 class="text-center">{item.date}</h1>
