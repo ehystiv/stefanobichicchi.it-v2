@@ -7,6 +7,7 @@
 	import InstagramLogo from 'phosphor-svelte/lib/InstagramLogo';
 	import Coffee from 'phosphor-svelte/lib/Coffee';
 
+
 	const year = new Date().getFullYear();
 	let ready = false;
 
@@ -34,5 +35,6 @@
 		</div>
 	{/if}
 	<div />
+
 	<h2 class="text-sm italic font-normal">SB - {year}</h2>
 </footer>

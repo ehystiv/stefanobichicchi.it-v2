@@ -5,6 +5,7 @@
 
 	import { onMount } from 'svelte';
 
+
 	let title = 'Stefano Bichicchi - Web Developer';
 	let writedTitle = '';
 	let i = 0;
@@ -49,11 +50,13 @@
 		writeTitle();
 		initTheme();
 	});
+
 </script>
 
 <header class="flex justify-between items-center px-4">
 	<h1 class="text-lg transition-all duration-500 ease-in-out dark:text-lime-400">
-		{writedTitle}<span class="underscore dark:text-lime-400">_</span>
+		{writedTitle}
+		<span class="underscore dark:text-lime-400">_</span>
 	</h1>
 	<button class="cursor-pointer" on:click={toggleDarkTheme}>
 		{#if currentTheme === 'light'}
