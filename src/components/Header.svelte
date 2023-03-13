@@ -1,14 +1,16 @@
-<script>
+<script lang="ts">
 	import Moon from 'phosphor-svelte/lib/Moon';
 	import Sun from 'phosphor-svelte/lib/Sun';
+	import Desktop from 'phosphor-svelte/lib/Desktop';
 
-	import { fly, fade } from 'svelte/transition';
+	import { onMount } from 'svelte';
 
 	let title = 'Stefano Bichicchi - Web Developer';
 	let writedTitle = '';
 	let i = 0;
 
-	let darkTheme = false;
+	let currentTheme = 'light';
+	const themes = ['light', 'dark'];
 
 	const iconSize = 30;
 
@@ -22,25 +24,43 @@
 	}
 
 	function toggleDarkTheme() {
-		document.documentElement.classList.toggle('dark');
-		darkTheme = !!document.documentElement.classList.contains('dark');
-		localStorage.theme = darkTheme;
+		let themeIndex = themes.findIndex((theme) => theme === currentTheme);
+
+		if (++themeIndex >= themes.length) themeIndex = 0;
+
+		currentTheme = themes[themeIndex];
+
+		localStorage.setItem('theme', currentTheme);
+
+		if (currentTheme === 'light') {
+			document.documentElement.classList.remove('dark');
+		} else if (currentTheme === 'dark') {
+			document.documentElement.classList.add('dark');
+		}
 	}
 
-	writeTitle();
+	function initTheme() {
+		currentTheme = localStorage.getItem('theme') || 'light';
+
+		if (currentTheme === 'dark') document.documentElement.classList.add('dark');
+	}
+
+	onMount(() => {
+		writeTitle();
+		initTheme();
+	});
 </script>
 
 <header class="flex justify-between items-center px-4">
 	<h1 class="text-lg transition-all duration-500 ease-in-out dark:text-lime-400">
-		{writedTitle}
-		<span class="underscore dark:text-lime-400">_</span>
+		{writedTitle}<span class="underscore dark:text-lime-400">_</span>
 	</h1>
 	<button class="cursor-pointer" on:click={toggleDarkTheme}>
-		{#if !darkTheme}
+		{#if currentTheme === 'light'}
 			<div>
 				<Moon size={iconSize} color="black" />
 			</div>
-		{:else}
+		{:else if currentTheme === 'dark'}
 			<div>
 				<Sun size={iconSize} color="white" />
 			</div>
