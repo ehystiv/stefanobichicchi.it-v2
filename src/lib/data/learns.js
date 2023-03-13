@@ -1,5 +1,12 @@
 export default [
 	{
+		name: 'sIDP',
+		link: 'https://github.com/Stiv1100001/sIDP',
+		date: '2023',
+		techStack: 'Nest.js + TypeORM + Docker + PostgreSQL',
+		description: "SimpleIDP, un piccolo IDP pronto all'uso"
+	},
+	{
 		name: 'stefanobichicchi.it',
 		link: '#',
 		date: '2023',
