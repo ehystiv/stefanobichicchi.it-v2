@@ -5,26 +5,83 @@
 </script>
 
 <Section id="languages">
-	<div
-		class="h-full basis-full grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 lg:grid-rows-6 place-items-center gap-3 p-2 lg:p-10"
-	>
-		{#each langAndTools as item}
-			<div
-				class="card h-full w-full bg-white dark:bg-zinc-500 flex justify-center items-center rounded-xl transition-all duration-300 hover:z-50 hover:scale-125 lg:hover:scale-150 relative border dark:border-slate-500 aspect-square"
-			>
-				<em class="{item.icon} colored text-4xl lg:text-6xl" />
-				<div
-					class="absolute w-full h-1/3 bottom-0 rounded-b-xl bg-gradient-to-t from-slate-500 dark:from-white to-transparent hidden items-center justify-center"
-				>
-					<h1 class="text-center dark:text-black text-[.6rem] md:text-md font-bold">{item.name}</h1>
+	<div class="h-full basis-full">
+		<div
+			class="h-full grid grid-cols-2 lg:grid-cols-3 grid-rows-[3rem,1fr,1fr,1fr] lg:grid-rows-[3rem,1fr,1fr] gap-3 dark:text-black"
+		>
+			<h1 class="text-4xl col-span-2 lg:col-span-3 dark:text-white">Linguaggi e strumenti 🧰</h1>
+			<div class="card">
+				<div class="title">Linguaggi</div>
+				<div class="container">
+					{#each langAndTools.filter((x) => x.type === 'lang') as lang}
+						<div class="relative">
+							<span
+								class="name absolute bg-blue-100 left-1/2 -top-8 -translate-x-1/2 text-sm p-2 rounded-md"
+								>{lang.name}</span
+							>
+							<em class="{lang.icon} icon colored" />
+						</div>
+					{/each}
 				</div>
 			</div>
-		{/each}
+			<div class="card">
+				<div class="title">Strumenti</div>
+				<div class="container">
+					{#each langAndTools.filter((x) => x.type === 'tools') as lang}
+						<em class="{lang.icon} icon colored" />
+					{/each}
+				</div>
+			</div>
+			<div class="card">
+				<div class="title">Framework</div>
+				<div class="container">
+					{#each langAndTools.filter((x) => x.type === 'framework') as lang}
+						<em class="{lang.icon} icon colored" />
+					{/each}
+				</div>
+			</div>
+			<div class="card">
+				<div class="title">Sistemi</div>
+				<div class="container">
+					{#each langAndTools.filter((x) => x.type === 'system') as lang}
+						<em class="{lang.icon} icon colored" />
+					{/each}
+				</div>
+			</div>
+			<div class="card">
+				<div class="title">Altro</div>
+				<div class="container">
+					{#each langAndTools.filter((x) => x.type === 'other') as lang}
+						<em class="{lang.icon} icon colored" />
+					{/each}
+				</div>
+			</div>
+		</div>
 	</div>
 </Section>
 
-<style lang="scss">
-	.card:hover > div {
-		display: flex;
+<style lang="scss" scoped>
+	.card {
+		@apply bg-white h-full rounded-md p-3;
+
+		.title {
+			@apply text-lg mb-3;
+		}
+
+		.container {
+			@apply flex flex-wrap justify-between gap-2;
+
+			.name {
+				display: none;
+			}
+
+			.icon {
+				@apply border rounded-lg p-1 shadow-lg text-4xl lg:text-6xl transition-all hover:scale-125;
+
+				&:hover ~ .name {
+					display: block;
+				}
+			}
+		}
 	}
 </style>
