@@ -4,8 +4,6 @@
 	import langAndTools from '../lib/data/langAndTools';
 
 	$: ltSort = langAndTools.sort((a, b) => a.type.localeCompare(b.type));
-
-	// const langAndToolsTypes = Array.from(new Set(langAndTools.map((x) => x.type)));
 </script>
 
 <Section id="languages">
@@ -20,15 +18,6 @@
 				</div>
 			{/each}
 		</div>
-		<!-- <div class="h-full flex flex-wrap dark:text-black">
-			{#each langAndTools as lt}
-				<div class="flex justify-center items-center">
-					<div class=" p-1 aspect-square w-20 z-40">
-						<em class="{lt.icon} icon colored w-full bg-white" />
-					</div>
-				</div>
-			{/each}
-		</div> -->
 	</div>
 </Section>
 
