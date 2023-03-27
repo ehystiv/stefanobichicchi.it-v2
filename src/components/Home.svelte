@@ -7,7 +7,7 @@
 		<h1 class="sm:text-2xl md:text-4xl lg:text-5xl">
 			Ciao, sono <span class="underline underline-offset-5 dark:text-lime-400">Stefano</span>
 		</h1>
-		<h1 class="sm:text-2xl md:text-4xl lg:text-5xl text-center">👋</h1>
+		<h1 class="sm:text-2xl md:text-4xl lg:text-5xl text-center say-hi">👋</h1>
 		<div class="sm:text-md md:text-lg lg:text-2xl font-light">
 			Sviluppatore WEB e amante della tecnologia, <span class="dark:text-lime-400">@Bologna.</span>
 			<br />
@@ -22,3 +22,37 @@
 		</div>
 	</div>
 </Section>
+
+<style scoped>
+	@keyframes shake {
+		0% {
+			transform: rotate(0deg);
+		}
+		10% {
+			transform: rotate(14deg);
+		}
+		20% {
+			transform: rotate(-8deg);
+		}
+		30% {
+			transform: rotate(14deg);
+		}
+		40% {
+			transform: rotate(-4deg);
+		}
+		50% {
+			transform: rotate(10deg);
+		}
+		60% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(0deg);
+		}
+	}
+
+	.say-hi {
+		animation: shake 2.5s infinite;
+		transform-origin: 70% 70%;
+	}
+</style>
