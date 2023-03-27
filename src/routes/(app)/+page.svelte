@@ -1,7 +1,7 @@
 <script>
-	import Home from '../components/Home.svelte';
-	import Languages from '../components/Languages.svelte';
-	import Works from '../components/Works.svelte';
+	import Home from '../../components/Home.svelte';
+	import Languages from '../../components/Languages.svelte';
+	import Works from '../../components/Works.svelte';
 </script>
 
 <svelte:head>

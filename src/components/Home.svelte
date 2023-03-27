@@ -20,10 +20,19 @@
 			<span>💻</span>
 			<span>🪄</span>
 		</div>
+		<div class="relative">
+			<a href="/blog" class="button">Leggi gli ultimi post</a>
+		</div>
 	</div>
 </Section>
 
-<style scoped>
+<style scoped lang="postcss">
+	.button {
+		@apply absolute inline-block font-bold px-3 py-2 rounded-lg shadow-lg transition-all bg-blue-300 hover:bg-blue-400 hover:shadow-xl border-b-4 border-blue-500 active:border-none active:translate-y-1 right-0 text-sm lg:text-base;
+	}
+
+	/* bg-blue-300 py-2 px-3 rounded-lg shadow-lg hover:bg-blue-400 hover:shadow-xl active:shadow-none transition-all font-bold border-b-4 active:border-b-0 border-blue-700 active:translate-y-2 */
+
 	@keyframes shake {
 		0% {
 			transform: rotate(0deg);
