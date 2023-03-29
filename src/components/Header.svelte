@@ -5,7 +5,6 @@
 
 	import { onMount } from 'svelte';
 
-
 	let title = 'Stefano Bichicchi - Web Developer';
 	let writedTitle = '';
 	let i = 0;
@@ -54,11 +53,10 @@
 		initTheme();
 
 		howl = new Howl({
-			src: '/sound/switch.mp3',
+			src: 'sound/switch.mp3',
 			volume: 0.3
 		});
 	});
-
 </script>
 
 <header class="flex justify-between items-center px-4">
