@@ -1,14 +1,14 @@
 <script lang="ts">
 	import Moon from 'phosphor-svelte/lib/Moon';
 	import Sun from 'phosphor-svelte/lib/Sun';
-	import Desktop from 'phosphor-svelte/lib/Desktop';
+	import { Howl, Howler } from 'howler';
 
 	import { onMount } from 'svelte';
-
 
 	let title = 'Stefano Bichicchi - Web Developer';
 	let writedTitle = '';
 	let i = 0;
+	let howl: Howler;
 
 	let currentTheme = 'light';
 	const themes = ['light', 'dark'];
@@ -25,6 +25,7 @@
 	}
 
 	function toggleDarkTheme() {
+		howl.play();
 		let themeIndex = themes.findIndex((theme) => theme === currentTheme);
 
 		if (++themeIndex >= themes.length) themeIndex = 0;
@@ -49,8 +50,12 @@
 	onMount(() => {
 		writeTitle();
 		initTheme();
-	});
 
+		howl = new Howl({
+			src: 'src/lib/sound/switch.mp3',
+			volume: 0.3
+		});
+	});
 </script>
 
 <header class="flex justify-between items-center px-4">
