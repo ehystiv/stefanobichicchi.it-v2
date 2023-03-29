@@ -15,7 +15,6 @@
 					class="icon aspect-square w-16 md:w-24 lg:w-32 flex justify-center items-center bg-white"
 				>
 					<em class="{lt.icon} colored" />
-
 				</div>
 			{/each}
 		</div>
