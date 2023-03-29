@@ -54,7 +54,7 @@
 		initTheme();
 
 		howl = new Howl({
-			src: 'src/lib/sound/switch.mp3',
+			src: '/sound/switch.mp3',
 			volume: 0.3
 		});
 	});
