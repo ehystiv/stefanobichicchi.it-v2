@@ -5,6 +5,7 @@
 
 	import { onMount } from 'svelte';
 
+
 	let title = 'Stefano Bichicchi - Web Developer';
 	let writedTitle = '';
 	let i = 0;
@@ -26,6 +27,7 @@
 
 	function toggleDarkTheme() {
 		howl.play();
+
 		let themeIndex = themes.findIndex((theme) => theme === currentTheme);
 
 		if (++themeIndex >= themes.length) themeIndex = 0;
@@ -56,6 +58,7 @@
 			volume: 0.3
 		});
 	});
+
 </script>
 
 <header class="flex justify-between items-center px-4">
