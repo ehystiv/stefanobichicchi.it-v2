@@ -28,9 +28,6 @@ specifiers:
   typescript: ^4.9.3
   vite: ^4.0.0
 
-dependencies:
-  howler: 2.2.3
-
 devDependencies:
   '@fontsource/aileron': 4.5.3
   '@sveltejs/adapter-netlify': 1.0.0-next.88_@sveltejs+kit@1.2.9
@@ -45,6 +42,7 @@ devDependencies:
   eslint: 8.32.0
   eslint-config-prettier: 8.6.0_eslint@8.32.0
   eslint-plugin-svelte3: 4.0.0_tmo5zkisvhu6htudosk5k7m6pu
+  howler: 2.2.3
   phosphor-svelte: 1.2.1_svelte@3.55.1
   postcss: 8.4.21
   prettier: 2.8.3
@@ -1349,7 +1347,7 @@ packages:
 
   /howler/2.2.3:
     resolution: {integrity: sha512-QM0FFkw0LRX1PR8pNzJVAY25JhIWvbKMBFM4gqk+QdV+kPXOhleWGCB6AiAF/goGjIHK2e/nIElplvjQwhr0jg==}
-    dev: false
+    dev: true
 
   /ignore/5.2.4:
     resolution: {integrity: sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==}
