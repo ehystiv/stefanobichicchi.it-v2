@@ -2,13 +2,14 @@
 	import Moon from 'phosphor-svelte/lib/Moon';
 	import Sun from 'phosphor-svelte/lib/Sun';
 	import { Howl, Howler } from 'howler';
+	import SwitchSound from './../lib/sound/switch.mp3';
 
 	import { onMount } from 'svelte';
 
 	let title = 'Stefano Bichicchi - Web Developer';
 	let writedTitle = '';
 	let i = 0;
-	let howl: Howler;
+	let howl: any = null;
 
 	let currentTheme = 'light';
 	const themes = ['light', 'dark'];
@@ -53,7 +54,7 @@
 		initTheme();
 
 		howl = new Howl({
-			src: 'sound/switch.mp3',
+			src: SwitchSound,
 			volume: 0.3
 		});
 	});
