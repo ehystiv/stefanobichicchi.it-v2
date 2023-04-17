@@ -1,7 +1,6 @@
 <script lang="ts">
-	import Moon from 'phosphor-svelte/lib/Moon';
-	import Sun from 'phosphor-svelte/lib/Sun';
-	import { Howl, Howler } from 'howler';
+	import User from 'phosphor-svelte/lib/UserCircle';
+	import { Howl } from 'howler';
 	import SwitchSound from './../lib/sound/switch.mp3';
 
 	import { onMount } from 'svelte';
@@ -20,8 +19,6 @@
 		}
 	}
 
-	
-
 	onMount(() => {
 		writeTitle();
 
@@ -37,6 +34,10 @@
 		{writedTitle}
 		<span class="underscore dark:text-lime-400">_</span>
 	</h1>
+
+	<a href="/login" class=" opacity-0 cursor-pointer hover:opacity-100 transition-all">
+		<User width=30 height=30  />
+	</a>
 	
 </header>
 

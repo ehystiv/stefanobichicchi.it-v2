@@ -28,6 +28,7 @@
 		"eslint-plugin-svelte3": "^4.0.0",
 		"howler": "^2.2.3",
 		"phosphor-svelte": "^1.2.1",
+		"pocketbase": "^0.13.1",
 		"postcss": "^8.4.21",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
