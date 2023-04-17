@@ -14,15 +14,15 @@
 	export let items: JobItem[] = [];
 </script>
 
-<div class="h-full w-full bg-white rounded-xl drop-shadow-lg p-4 overflow-auto scrollbar-hide">
-	<h1 class="text-3xl font-thin">{title}</h1>
+<div class="h-full w-full bg-ctp-overlay2 rounded-xl drop-shadow-lg p-4 overflow-auto scrollbar-hide text-ctp-crust">
+	<h1 class="text-3xl font-thin text-ctp-rosewater ">{title}</h1>
 	<hr class="mb-4" />
 	<div class="flex flex-col">
 		{#each items as item}
 			<div
-				class="relative grid grid-cols-[1fr_.2fr] grid-rows-[.5fr_.5fr_2fr] px-2 pb-2 border-l-2 before:content[''] before:absolute before:top-0 before:left-0 before:rounded-full before:bg-white before:w-[12px] before:h-[12px] before:border-2 before:border-black before:-translate-x-[60%]"
+				class="relative grid grid-cols-[1fr_.2fr] grid-rows-[.5fr_.5fr_2fr] px-2 pb-2 border-l-2 before:content[''] before:absolute before:top-0 before:left-0 before:rounded-full before:bg-ctp-peach before:w-[12px] before:h-[12px] before:border-2 before:border-ctp-peach before:-translate-x-[60%]"
 			>
-				<h1 class=" text-lg capitalize flex items-center">
+				<h1 class=" text-lg capitalize flex items-center text-ctp-rosewater ">
 					<div>
 						{item.name}
 						{#if item.client} <span>- ({item.client})</span> {/if}
