@@ -6,7 +6,7 @@
 
 {#if to}
 	<a
-		class="arrow absolute z-10 left-1/2 -translate-x-1/2 text-black dark:text-lime-400 rounded-lg transition-all duration-500 ease-in-out bottom-4 dark:bg-neutral-900 dark:rounded-full"
+		class="arrow absolute z-10 left-1/2 -translate-x-1/2 text-ctp-text rounded-lg transition-all duration-500 ease-in-out bottom-4 dark:bg-neutral-900 dark:rounded-full"
 		href={String(to)}
 	>
 		<ArrowCircleDown size="60" />

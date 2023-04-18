@@ -14,9 +14,9 @@
 	onMount(() => (ready = true));
 </script>
 
-<footer class="px-4 flex justify-between items-center dark:text-lime-400">
+<footer class="px-4 flex justify-between items-center">
 	{#if ready}
-		<div class="w-1/4 flex justify-evenly" transition:slide={{ duration: 1000 }}>
+		<div class="w-1/4 flex justify-evenly text-ctp-rosewater" transition:slide={{ duration: 1000 }}>
 			<a href="https://github.com/Stiv1100001" class="transition-all hover:rotate-45">
 				<GithubLogo size="25" />
 			</a>
@@ -36,5 +36,5 @@
 	{/if}
 	<div />
 
-	<h2 class="text-sm italic font-normal">SB - {year}</h2>
+	<h2 class="text-sm italic font-normal text-ctp-green">SB - {year}</h2>
 </footer>
